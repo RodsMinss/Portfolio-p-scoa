@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Páscoa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ffe5ec, #fff1c1);
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #ffb6b9;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #fff8f0;
+    }
+
+    .mensagem {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #ff69b4;
+      font-weight: bold;
+    }
+
+    .portfolio {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      font-size: 1.4rem;
+      color: #ff69b4;
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Feliz Páscoa, Amiga!</h1>
+    <p>Um portfólio feito com carinho para celebrar essa data tão doce e especial.</p>
+  </header>
+
+  <div class="mensagem">Você é incrível! ✨🐣</div>
+
+  <section class="portfolio">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523362628745-0c100150b7a0" alt="Ovos de Páscoa coloridos">
+      <h3>Artesanato de Páscoa</h3>
+      <p>Criações feitas com amor para decorar a casa e espalhar alegria.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551907234-1484f06c1c4e" alt="Coelhinho fofo">
+      <h3>Inspiração e Alegria</h3>
+      <p>Porque a Páscoa é tempo de renovar e se cercar de boas energias.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Chocolate de páscoa">
+      <h3>Delícias da Páscoa</h3>
+      <p>Doces momentos para compartilhar com quem a gente ama!</p>
+    </div>
+  </section>
+
+  <footer>
+    Feito com ❤️ por um(a) grande admirador(a) da sua luz e criatividade.
+  </footer>
+
+  <!-- Música de fundo suave -->
+  <audio autoplay loop volume="0.3">
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/21/audio_68a0346837.mp3?filename=bunny-hop-142373.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <script>
+    // Comportamento JS simples - animação ao carregar
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.card').forEach((card, i) => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+          card.style.opacity = 1;
+          card.style.transform = 'translateY(0)';
+        }, i * 200);
+      });
+    });
+  </script>
+</body>
+
+</html>
